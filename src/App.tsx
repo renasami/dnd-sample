@@ -1,10 +1,5 @@
-import React, { useState } from "react";
-import {
-  DragDropContext,
-  Droppable,
-  Draggable,
-  DropResult,
-} from "react-beautiful-dnd";
+import { FC, useState } from "react";
+import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 import { Item } from "./types";
 import { ItemComponent } from "./itme";
 
@@ -15,7 +10,7 @@ const initialItems: Item[] = [
   { id: "4", content: "Item 4", row: 4, col: 1, width: 2 },
 ];
 
-const CustomGridDnD: React.FC = () => {
+const CustomGridDnD: FC = () => {
   const [items, setItems] = useState<Item[]>(initialItems);
 
   // ドラッグ終了時の処理
