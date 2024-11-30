@@ -25,6 +25,9 @@ const CustomGridDnD: FC = () => {
       />
       <br />
       <p>要素ダブルクリックで大きさ変わる</p>
+      <p>
+        <a>https://github.com/renasami/dnd-sample</a>
+      </p>
       <Button intent="success" text="add item" onClick={addItems}></Button>
     </>
   );
