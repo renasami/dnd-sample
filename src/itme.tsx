@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Item } from "./types";
 import { Draggable } from "react-beautiful-dnd";
+import { Card } from "@blueprintjs/core";
 
 type Props = {
   item: Item;
@@ -16,7 +17,8 @@ export const ItemComponent: FC<Props> = ({
   return (
     <Draggable key={item.id} draggableId={item.id} index={index}>
       {(provided) => (
-        <div
+        <Card
+          elevation={1}
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
@@ -33,7 +35,7 @@ export const ItemComponent: FC<Props> = ({
           }}
         >
           {item.content}
-        </div>
+        </Card>
       )}
     </Draggable>
   );

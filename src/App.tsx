@@ -24,11 +24,8 @@ const CustomGridDnD: FC = () => {
         maxRow={maxRow}
       />
       <br />
-      <Button
-        intent="success"
-        text="button content"
-        onClick={addItems}
-      ></Button>
+      <p>要素ダブルクリックで大きさ変わる</p>
+      <Button intent="success" text="add item" onClick={addItems}></Button>
     </>
   );
 };
